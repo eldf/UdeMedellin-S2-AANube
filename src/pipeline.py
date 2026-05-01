@@ -17,7 +17,8 @@ def run_ml_pipeline():
     DATASET_ID = "mlg-ulb/creditcardfraud"
     RAW_DATA_FILE = PROJECT_ROOT / "data" / "raw" / "creditcard.csv"
 
-    # Configuración de MLflow
+    # Configuración de MLflow: forzar almacenamiento local en el directorio mlruns del proyecto
+    mlflow.set_tracking_uri(f"file://{PROJECT_ROOT / 'mlruns'}")
     mlflow.set_experiment("fraude_crediticio_pipeline")
 
     with mlflow.start_run(run_name="Full_Pipeline_Execution"):
