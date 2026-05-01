@@ -107,3 +107,13 @@ python main.py
 ```bash
 docker-compose up --build -d
 ```
+
+Ejecucion manual con prefect
+
+uv sync
+prefect server start
+uv run python src/orchestrator.py
+
+docker-compose build fraud-api
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen
