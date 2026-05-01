@@ -1,0 +1,24 @@
+services:
+  fraud-api:
+    build: .
+    container_name: fraud_detection_service
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      # Mapeamos las carpetas locales para persistencia y carga del modelo
+      - ./mlruns:/app/mlruns
+      - ./data:/app/data
+    restart: always
+
+  # Opcional: Levantar la UI de MLflow como un servicio paralelo
+  mlflow-ui:
+    image: python:3.11-slim
+    container_name: mlflow_ui
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns
+    command: >
+      sh -c "pip install mlflow && mlflow ui --host 0.0.0.0 --port 5000"
