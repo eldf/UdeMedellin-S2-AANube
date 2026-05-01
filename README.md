@@ -42,6 +42,35 @@ Este repositorio contiene un pipeline de ML orientado a detección de fraude con
 ├── `mlflow.db`              # Base de datos local de MLflow
 └── `README.md`              # Documentación del proyecto
 
+## Modelos de entrenamiento
+
+El pipeline entrena y compara dos modelos de clasificación:
+
+### 1. Random Forest Classifier
+- **Descripción**: Modelo de ensamble que combina múltiples árboles de decisión para mejorar la precisión y robustez.
+- **Configuración**:
+  - `n_estimators=100` (100 árboles en el bosque)
+  - `max_depth=5` (profundidad máxima de cada árbol)
+  - `random_state=42` (reproducibilidad)
+- **Ventajas**: Excelente manejo de datos desbalanceados, interpretable y rápido.
+
+### 2. XGBoost Classifier
+- **Descripción**: Algoritmo de boosting extremo que entrena árboles de forma secuencial para corregir errores previos.
+- **Configuración**:
+  - `n_estimators=100` (100 iteraciones de boosting)
+  - `max_depth=5` (profundidad máxima de cada árbol)
+  - `learning_rate=0.1` (tasa de aprendizaje)
+  - `scale_pos_weight=ratio` (ajuste automático del peso para clase minoritaria - casos de fraude)
+- **Ventajas**: Manejo automático del desbalance de clases, generalmente mejor rendimiento en problemas de fraude.
+
+### Métrica de evaluación
+- **PR-AUC (Area Under Precision-Recall Curve)**: Métrica preferida para datos desbalanceados como el fraude. Es más informativa que ROC-AUC cuando la clase positiva es rara.
+
+### Registro y seguimiento
+Ambos modelos se registran automáticamente en:
+- **MLflow**: Almacenamiento local en `mlruns/` con métricas, parámetros y artefactos.
+- **Modelo registrado**: Se guarda bajo el nombre `DetectorFraudes` para futuras predicciones.
+
 ## Requisitos
 - Python 3.10+
 - Kaggle API credentials en `.env`
