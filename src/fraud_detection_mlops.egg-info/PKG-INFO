@@ -24,3 +24,6 @@ Requires-Dist: fastapi>=0.136.1
 Requires-Dist: uvicorn>=0.46.0
 Requires-Dist: pydantic>=2.13.3
 Requires-Dist: locust>=2.43.4
+
+# UdeMedellin-S2-AANube
+Proyectos de MLOPS en la asignatura aprendizaje Automático en la nube
