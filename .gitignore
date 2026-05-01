@@ -1,0 +1,55 @@
+# --- Entorno de Python y Dependencias ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+.python-version
+.uv/
+.dvc/
+
+# --- Variables de Entorno (SEGURIDAD CRÍTICA) ---
+.env
+
+# --- MLOps: MLflow ---
+# Ignoramos la base de datos de experimentos y modelos local
+mlruns/
+mlruns.db
+
+# --- MLOps: DVC ---
+# Ignoramos el cache y datos locales, DVC trackea los punteros .dvc
+/data/
+/data/raw/
+/data/*
+!/data/.gitkeep
+.dvc/cache/
+.dvc/tmp/
+.dvc/config.local
+
+# --- Docker ---
+.docker/
+docker-compose.override.yml
+
+# --- Sistema Operativo (macOS) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Network Trash Folder
+Temporary Items
+.Spotlight-V100
+.Trashes
+
+# --- IDEs (VS Code / PyCharm) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs y Archivos Temporales ---
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
