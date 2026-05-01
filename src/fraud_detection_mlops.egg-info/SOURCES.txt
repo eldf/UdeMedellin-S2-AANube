@@ -1,0 +1,15 @@
+pyproject.toml
+src/api.py
+src/data_prep.py
+src/evaluate.py
+src/ingestion.py
+src/interface.py
+src/pipeline.py
+src/simulation.py
+src/tasks.py
+src/train.py
+src/fraud_detection_mlops.egg-info/PKG-INFO
+src/fraud_detection_mlops.egg-info/SOURCES.txt
+src/fraud_detection_mlops.egg-info/dependency_links.txt
+src/fraud_detection_mlops.egg-info/requires.txt
+src/fraud_detection_mlops.egg-info/top_level.txt
