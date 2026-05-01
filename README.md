@@ -3,7 +3,12 @@ Proyecto de MLOps para detección de fraude en transacciones con tarjeta de cré
 
 Autores:
 Diego Fernando Nunez Diaz
+
 Jhonatan Gallego Mosquera
+
+Repositorio
+https://github.com/eldf/UdeMedellin-S2-AANube
+
 
 ## Descripción
 Este repositorio contiene un pipeline de ML orientado a detección de fraude con:
