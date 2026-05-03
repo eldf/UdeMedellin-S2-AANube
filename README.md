@@ -4,7 +4,7 @@ Proyecto de MLOps para detección de fraude en transacciones con tarjeta de cré
 Autores:
 Diego Fernando Nunez Diaz
 
-Jhonatan Gallego Mosquera
+Jhonatan Mosquera Gallego
 
 Repositorio
 https://github.com/eldf/UdeMedellin-S2-AANube
