@@ -95,6 +95,14 @@ Además, descarga tu `kaggle.json` desde Kaggle y colócalo en:
 ```bash
 source .venv/bin/activate
 ```
+uv sync
+
+### Ejecucion del analisis exploratorio de datos
+
+uv run jupyter notebook notebooks/EDA.ipynb
+en caso de presentar problemas lanzarlo con el comando
+.venv/bin/python -m notebook notebooks/EDA.ipynb
+
 
 2. Ejecuta el pipeline:
 

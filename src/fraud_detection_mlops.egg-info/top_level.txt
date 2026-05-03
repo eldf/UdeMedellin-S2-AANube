@@ -1,8 +1,7 @@
 api
-data_prep
-evaluate
 ingestion
 interface
+orchestrator
 pipeline
 simulation
 tasks
